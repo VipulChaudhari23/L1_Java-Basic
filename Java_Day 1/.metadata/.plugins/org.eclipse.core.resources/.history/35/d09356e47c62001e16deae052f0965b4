@@ -1,0 +1,52 @@
+package com.trainig.org;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class XYZOrg {
+	public static void main(String[] args) {
+		
+		ArrayList<Employee> empList = new ArrayList<Employee>();
+		Scanner input = new Scanner(System.in);
+		char ch = 'y';
+		do {
+			System.out.println("1] Add new record\n2] Display records\n\n");
+			int choice = input.nextInt();
+			switch (choice) {
+			case 1:
+				System.out.println("Enter empId");
+				int id = input.nextInt();
+				System.out.println("Enter empName");
+				String name = input.next();
+				System.out.println("Enter salary");
+				double sal = input.nextInt();  
+				
+				empList.add(new Employee(id,name,sal));
+				System.out.println("Record is added Successfully.....");
+				break;
+			
+			case  2: 
+				System.out.println("********** Employee Records are **********");
+				for(Employee emp : empList) {
+					System.out.println(emp);
+				}
+				break;
+	
+			default:
+				System.out.println("Invaid choice........");
+				break;
+			}
+			
+		}while(ch == 'y' || ch == 'Y');
+		System.out.println("I'm Done");
+		
+		// creating the default constructor form Employee.java
+		Employee e1 = new Employee();
+		System.out.println(e1);
+		
+		//creating the parameterized constructor form Employee.java
+		Employee e2 = new Employee(101, "Vipul", 10000);
+		System.out.println(e2);
+	}
+}

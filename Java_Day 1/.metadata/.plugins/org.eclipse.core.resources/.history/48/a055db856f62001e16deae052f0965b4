@@ -1,0 +1,30 @@
+package com.training.org;
+
+/**
+ * @author vipulp
+ *
+ */
+public class Complex {
+	private int real;
+	private int imag;
+	
+	public Complex() {
+		System.out.println("Default constructor of complex is called");
+		real = 0;
+		imag = 0;
+	}
+	
+	public void ShowComplexValues() {
+		System.out.println("Complex Values are "+real+" "+imag);
+	}
+	
+	public static void main(String[] args) {
+		Complex c1 = new Complex();
+		c1.ShowComplexValues();
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println("I: " + i);
+		}
+	}
+	
+}
