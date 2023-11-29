@@ -6,6 +6,46 @@ import java.util.Scanner;
 
 public class XYZOrg {
 	public static void main(String[] args) {
+		
+		StackSalesEmployee mystack = new StackSalesEmployee(10);
+		
+		SalesEmployee se1 = new SalesEmployee(101,"Eshan",15000,5000);
+		se1.calculateSalary();
+		
+		SalesEmployee se2 = new SalesEmployee(102,"Vipul",17000,5000);
+		se2.calculateSalary();
+		
+		SalesEmployee se3 = new SalesEmployee(103,"Vinay",10000,5000);
+		se3.calculateSalary();
+		
+		SalesEmployee se4 = new SalesEmployee(104,"Yash",12000,5000);
+		se4.calculateSalary();
+		
+		SalesEmployee se5 = new SalesEmployee(105,"Saiem",18000,5000);
+		se5.calculateSalary();
+		
+		SalesEmployee se6 = new SalesEmployee(106,"Madhur",20000,5000);
+		se6.calculateSalary();
+		
+		mystack.push(se1);
+		mystack.push(se2);
+		mystack.push(se3);
+		mystack.push(se4);
+		mystack.push(se5);
+		mystack.push(se6);
+		System.out.println(mystack);
+		
+//		System.out.println(mystack.pop());
+		
+		
+		
+		
+		// calling the Parameterized constructor form the SalesEmployee using the tostring method. 
+		SalesEmployee se7=new SalesEmployee(107,"Neha",1000,5000);
+//		// calling the calculateSalary() from SalesEmployee. 
+		se1.calculateSalary();
+		System.out.println(se1);
+		
 		// creation of Array
 		ArrayList<Employee> empList = new ArrayList<Employee>();
 		
